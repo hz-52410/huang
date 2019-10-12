@@ -1,0 +1,7 @@
+<!--pages/about/about.wxml-->
+<view class='about'>
+<image class='about-banner' src='/images/simba.jpg'></image>
+<text style='font-weight:600;font-size:40rpx'>电影周周看</text>
+<view><text>我</text><navigator  open-type="switchTab" style="display:inline;"class="defult-color" hover-class="nav-hover" url='/pages/index/index'>每周推荐</navigator> <text>一部好片</text></view>
+<text>我的微博：weibo.com/huangzhe</text>
+</view>

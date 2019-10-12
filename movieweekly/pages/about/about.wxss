@@ -1,0 +1,7 @@
+/* pages/about/about.wxss */
+.defult-color{
+  color: green;
+}
+.nav-hover{
+  color: red;
+}

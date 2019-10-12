@@ -1,0 +1,11 @@
+<!--pages/detail/detail.wxml-->
+<view class='about' wx:if="{{loading}}">
+  <image src="{{movie.images.small}}"></image>
+  <text style='font-size:40rpx;font-weight:600;'>{{movie.title}}</text>
+  <text>想看：{{movie.rating.details[5]}}</text>
+  <text>看过：{{movie.collect_count}}</text>
+  <text>评分：{{movie.rating.average}}</text>
+  <view>类型：<block wx:for="{{movie.genres}}" wx:key="index"><text>{{item}}</text></block></view>
+  
+  
+</view>

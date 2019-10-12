@@ -1,0 +1,18 @@
+<!--pages/index/index.wxml-->
+
+<swiper style='height:100vh' indicator-dots='{{true}}' previous-margin="50rpx" next-margin="50rpx" current='{{currentIndex}}'>
+  <block wx:for="{{thisWeekMovie}}" wx:key="index">
+    <swiper-item style="background:#fff;">
+      <view bindtap='f1' data-movie-id='{{item.id}}' class='about' style="background:#ccc;margin:0 20rpx;">
+        <image style="height:300rpx;width:300rpx;" src='{{item.imagePath}}'></image>
+        <text style='font-size:40rpx;'>第{{index+1}}周：{{item.name}}</text>
+        <text>点评：{{item.comment}}</text>
+        <text wx:if="{{item.isHightlyRecommended}}" style='color:red;'>强烈推荐</text>
+        <text catchtap='f0' wx:if="{{index<(thisWeekMovie.length-1)}}" style='position:absolute;top:20rpx;right:20rpx;'>返回本周</text>
+        <view catchtap='f2'>
+            <button>推荐列表</button>
+        </view>
+      </view>
+    </swiper-item>
+  </block>
+</swiper>

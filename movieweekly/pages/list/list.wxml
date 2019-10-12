@@ -1,0 +1,11 @@
+<!--pages/list/list.wxml-->
+<scroll-view scroll-y='true' style="height:100vh" bindscrolltolower='lower'>
+  <view class='list' wx:for="{{movie}}" wx:key="index">
+    <image src='{{item.images.small}}'></image>
+    <view class='list-text'>
+      <text>第{{index+1}}周：{{item.title}}</text>
+      <text>评分：{{item.rating.average}}</text>
+      <text wx:if="{{item.has_video}}" style='color:red;'>强烈推荐</text>
+    </view>
+  </view>
+</scroll-view>
